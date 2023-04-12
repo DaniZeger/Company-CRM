@@ -1,0 +1,30 @@
+<div class="bg-body-secondary p-3" style="border-radius: 10px;">
+    <form [formGroup]="addCustomerForm" (ngSubmit)="onSubmit()" class="row g-6" style="width: 98%;">
+        <div class="col">
+            <input formControlName="firstName" type="text" class="form-control" id="name" placeholder="First Name">
+            <app-error-field [formField]="getFieldControl('firstName')"></app-error-field>
+        </div>
+        <div class="col">
+            <input formControlName="lastName" type="text" class="form-control" id="name" placeholder="Last Name">
+            <app-error-field [formField]="getFieldControl('lastName')"></app-error-field>
+        </div>
+        <div class="col">
+            <input formControlName="phone" type="text" class="form-control" id="phone" placeholder="000-0000000">
+            <app-error-field [formField]="getFieldControl('phone')"></app-error-field>
+        </div>
+        <div class="col">
+            <input formControlName="email" type="text" class="form-control" id="email" placeholder="Email">
+            <app-error-field [formField]="getFieldControl('email')"></app-error-field>
+        </div>
+        <div class="col-1">
+            <button type="submit" class="btn btn-primary px-5">
+                Add
+            </button>
+        </div>
+    </form>
+
+    <div *ngIf="showNote" class=" mt-2 alert alert-success alert-dismissible" role="alert">
+        <strong>Success!</strong> Your customers list seccessfuly updated!
+        <button (click)="closeNote()" type="button" class="btn-close"></button>
+
+    </div>

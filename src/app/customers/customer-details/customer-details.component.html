@@ -1,0 +1,35 @@
+<app-header [icon]="'bi bi-file-person-fill'" [title]="title"></app-header>
+
+<div class="card m-auto mt-5 bg-body-secondary" style="width: 50rem;">
+    <div class="card-body d-flex">
+        <h3 class="fw-bold card-title">{{customer.firstName}} {{customer.lastName}}</h3>
+        <div class="ps-3">
+            <a routerLink="/edit-customer/{{customer._id}}" class="btn action-btn text-primary"><i
+                    class="bi bi-pencil-fill"></i></a>
+            <button (click)="onDelete(customer)" class="btn text-danger ps-1"><i class="bi bi-trash-fill"></i></button>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <h4>
+                <i class="bi bi-telephone-fill me-2"></i>
+                {{customer.phone}}
+            </h4>
+        </li>
+        <li class="list-group-item">
+            <h4>
+                <i class="bi bi-envelope-fill me-2"></i>
+                {{customer.email}}
+            </h4>
+        </li>
+        <li class="list-group-item">
+            <h4>
+                <i class="bi bi-building-fill me-2"></i>
+                <span [ngClass]="noAddress(customer)"> {{customer.address}}</span>
+            </h4>
+        </li>
+    </ul>
+    <div class="card-body">
+        <a routerLink="/customers" class="card-link"> Back to customers page</a>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+{
+    "customers": [
+        {
+            "firstName": "Dave",
+            "lastName": "Black",
+            "phone": "052-5335335",
+            "email": "daveB@gmail.com",
+            "Address": "Menachem brgin 35, Tel-Aviv, Israel"
+        },
+        {
+            "firstName": "Josh",
+            "lastName": "Zane",
+            "phone": "052-5331523",
+            "email": "Joshz@gmail.com",
+            "Address": "Bialic 30, Ramat-Gan, Israel"
+        },
+        {
+            "firstName": "Ronen",
+            "lastName": "Cohen",
+            "phone": "0525451235",
+            "email": "ronenC@gmail.com",
+            "Address": "Keren hayesod 110, Jerusalem, Israel"
+        },
+        {
+            "firstName": "Eli",
+            "lastName": "Yaho",
+            "phone": "052-8463335",
+            "email": "EliY@gmail.com",
+            "Address": "Dizingof 144, Tel-Aviv, Israel"
+        },
+        {
+            "firstName": "Alice",
+            "lastName": "Max",
+            "phone": "052-1245635",
+            "email": "aliceM@gmail.com",
+            "Address": "Ben Goriyon 58, Ramat-Gan, Israel"
+        }
+    ]
+}

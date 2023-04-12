@@ -1,0 +1,40 @@
+{
+    "employees": [
+        {
+            "name": "Daniel Zegerson",
+            "phone": "052-5800621",
+            "email": "Dani@gmail.com",
+            "birthday": "28/03/1992"
+        },
+        {
+            "name": "Yuval Peretz",
+            "phone": "054-5698521",
+            "email": "yuvalp@gmail.com",
+            "birthday": "01/04/1989"
+        },
+        {
+            "name": "Kim Kay",
+            "phone": "050-1234965",
+            "email": "Kim@gmail.com",
+            "birthday": "22/10/1994"
+        },
+        {
+            "name": "Ron Shoval",
+            "phone": "054-1236745",
+            "email": "ronS@gmail.com",
+            "birthday": "15/11/1990"
+        },
+        {
+            "name": "Noa Levi",
+            "phone": "050-1463289",
+            "email": "noa@gmail.com",
+            "birthday": "11/08/1993"
+        },
+        {
+            "name": "Mor Menashe",
+            "phone": "054-1237965",
+            "email": "mor@gmail.com",
+            "birthday": "15/02/1989"
+        }
+    ]
+}

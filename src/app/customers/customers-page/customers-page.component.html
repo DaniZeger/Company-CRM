@@ -1,0 +1,40 @@
+<app-header [icon]="'bi bi-credit-card-2-front-fill'" [title]="title"></app-header>
+
+<div class="px-5 m-auto" style="width: 90%;">
+    <div class="d-flex justify-content-end mt-3">
+        <button *ngIf="!showForm" (click)="toggleForm()" id="add" class="btn btn-outline-primary mt-3">
+            <i class="bi bi-person-plus-fill me-2"></i> Add Costumer
+        </button>
+    </div>
+    <app-add-customer *ngIf="showForm"></app-add-customer>
+
+    <table class="table mt-4">
+        <thead style="border-bottom: 2px black solid;">
+            <tr>
+                <th class="align-middle">#</th>
+                <th class="align-middle">First Name</th>
+                <th class="align-middle">Last Name</th>
+                <th class="align-middle">Phone</th>
+                <th class="align-middle">Email</th>
+                <th class="align-middle">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customersList; index as i">
+                <td>{{i + 1}}</td>
+                <td>{{customer.firstName}}</td>
+                <td>{{customer.lastName}}</td>
+                <td>{{customer.phone}}</td>
+                <td>{{customer.email}}</td>
+                <td style="width: 11%;">
+                    <a routerLink="/customer-details/{{customer._id}}" class="btn action-btn text-secondary"><i
+                            class="bi bi-eye-fill"></i></a>
+                    <a routerLink="/edit-customer/{{customer._id}}" class="btn action-btn text-primary"><i
+                            class="bi bi-pencil-fill"></i></a>
+                    <button (click)="onDelete(customer)" class="btn action-btn text-danger"><i
+                            class="bi bi-trash-fill"></i></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
