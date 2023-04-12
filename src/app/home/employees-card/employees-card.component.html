@@ -1,0 +1,29 @@
+<div class="card mx-4" style="width: 18rem; box-shadow: 3px 2px 9px 1px rgba(0, 0, 0, 0.71);">
+    <img src="../../../assets/img/Screenshot 2023-04-12 173342.png" class="card-img-top" alt="..."
+        style="height: 150px">
+    <div class="card-body">
+        <h5 class="card-title">EMPLOYEES</h5>
+        <p class="card-text">Start menging your employees list and details...</p>
+        <ul *ngIf="employeeBirthday()" class="list-group mb-3">
+            <li *ngFor="let one of birthdays" class="list-group-item">
+                <h5>
+                    <strong class="text-success"> {{one.name}}
+                    </strong> Have a birthday today!
+                    <i class="bi bi-balloon"></i>
+                </h5>
+                <h6 class="">
+                    <a href="mailto:{{one.email}}"><i style="text-decoration: none;"
+                            class="bi bi-envelope me-1"></i>Send
+                        blessing </a>
+                </h6>
+
+            </li>
+        </ul>
+        <ul *ngIf="!employeeBirthday()" class="list-group mb-3">
+            <li class="list-group-item"> It's nobody's birthday today
+
+            </li>
+        </ul>
+        <a routerLink="/customers" class="btn btn-primary">To employees page <i class="bi bi-caret-right-fill"></i></a>
+    </div>
+</div>

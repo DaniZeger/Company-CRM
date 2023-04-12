@@ -31,7 +31,7 @@ const customerSchema = new mongoose.Schema({
         minlength: 6,
         maxlength: 350,
         unique: false
-    },
-});
+    }
+}, { timestamps: true });
 
 exports.Customer = mongoose.model("customer", customerSchema);

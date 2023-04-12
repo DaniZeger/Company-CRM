@@ -1,0 +1,15 @@
+<div class="card mx-4" style="width: 18rem; box-shadow: 3px 2px 9px 1px rgba(0, 0, 0, 0.71);">
+    <img src="../../../assets/img/Screenshot 2023-04-12 171246.png" class="card-img-top" alt="..."
+        style="height: 150px">
+    <div class="card-body">
+        <h5 class="card-title">CUSTOMERS</h5>
+        <p class="card-text">Start menging your customers list and details...</p>
+        <ul class="list-group mb-3">
+            <li class="list-group-item"> Total Customers: <strong>{{customersList.length}}</strong></li>
+            <li [ngClass]="newCustomersAdded()" class="list-group-item text-success">Added this week:
+                <strong>{{thisWeekCustomers.length}}</strong>
+            </li>
+        </ul>
+        <a routerLink="/customers" class="btn btn-primary">To customers page <i class="bi bi-caret-right-fill"></i></a>
+    </div>
+</div>

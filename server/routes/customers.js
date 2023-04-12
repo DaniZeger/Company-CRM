@@ -7,6 +7,7 @@ const customers = require('../controllers/customers');
 router.put('/init', customers.reset)
 
 router.get('/', customers.getAll);
+router.get('/last-week', customers.getLastWeek);
 router.get('/:id', customers.getOne);
 
 router.post('/', customers.addNew);

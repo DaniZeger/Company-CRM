@@ -23,6 +23,18 @@ module.exports = {
         })
     },
 
+    getLastWeek: async function (req, res, next) {
+        try {
+            const result = await Customer.find({ createdAt: { $gte: new Date(new Date() - 7 * 60 * 60 * 24 * 1000) } });
+            res.json(result);
+        }
+        catch (err) {
+            console.log(err);
+            res.status(400).json({ error: 'error getting customers' });
+        }
+    },
+
+
     getAll: async function (req, res, next) {
         try {
             const result = await Customer.find({});

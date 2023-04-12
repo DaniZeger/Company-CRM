@@ -91,6 +91,9 @@ export class ApiService {
   getCustomers(): Observable<Array<Customer>> {
     return this.GET<Array<Customer>>('customers')
   }
+  getLastWeekCustomers(): Observable<Array<Customer>> {
+    return this.GET<Array<Customer>>('customers/last-week')
+  }
 
   getOneCustomer(id: string): Observable<Customer> {
     return this.GET<Customer>(`customers/${id}`)
