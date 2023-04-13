@@ -9,11 +9,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li *ngIf="loggedIn()" class="nav-item">
                     <a class="nav-link text-white" routerLink="/customers">
                         Customers</a>
                 </li>
-                <li class="nav-item">
+                <li *ngIf="loggedIn()" class="nav-item">
                     <a class="nav-link text-white" routerLink="/employees">Employees</a>
             </ul>
             <div class="d-flex">
@@ -23,6 +23,9 @@
                     </li> -->
                     <li *ngIf="!loggedIn()" class="nav-item">
                         <a routerLink="/login" class="text-info nav-link" aria-current="page">Log In </a>
+                    </li>
+                    <li *ngIf="!loggedIn()" class="nav-item">
+                        <a routerLink="/signin" class="text-white nav-link" aria-current="page">Sign Up </a>
                     </li>
                     <li *ngIf="loggedIn()" class="nav-item">
                         <button (click)="logOut()" class="text-danger btn nav-link" aria-current="page">Log Out

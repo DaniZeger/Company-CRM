@@ -9,9 +9,11 @@ import { EditCustomerComponent } from './customers/edit-customer/edit-customer.c
 import { CustomerDetailsComponent } from './customers/customer-details/customer-details.component';
 import { EmployeesPageComponent } from './employees/employees-page/employees-page.component';
 import { HomePageComponent } from './home/home-page/home-page.component';
+import { SigninPageComponent } from './auth/signin-page/signin-page.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginPageComponent },
+  { path: 'signin', component: SigninPageComponent },
   {
     path: '',
     canActivateChild: [AuthService],

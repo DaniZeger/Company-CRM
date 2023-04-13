@@ -1,0 +1,27 @@
+<section>
+    <h1 class="text-center fw-bold fs-1">
+        COMPANY <span class="text-info"><i class="bi bi-columns-gap"></i></span> CRM
+    </h1>
+    <h4 class="text-center text-secondary fs-4">Create new account</h4>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="mt-5">
+        <div class="mb-2">
+            <input #nameFieldRef type="text" class="form-control" formControlName="name" placeholder="Name">
+        </div>
+        <app-error-field [formField]="getFieldControl('name')"></app-error-field>
+        <div class="mt-4 mb-2">
+            <input type="text" class="form-control" formControlName="email" placeholder="Email">
+        </div>
+        <app-error-field [formField]="getFieldControl('email')"></app-error-field>
+        <div class="mt-4 mb-2">
+            <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        </div>
+        <app-error-field [formField]="getFieldControl('password')"></app-error-field>
+        <div class="d-grid gap-2 mt-4">
+            <button [disabled]="signUpForm.invalid" class="btn btn-primary btn-lg" type="submit">Sign Up</button>
+        </div>
+    </form>
+    <div class="text-center mt-3">
+        <a routerLink="/login" class=" text-body-tertiary">
+            I already have an account</a>
+    </div>
+</section>

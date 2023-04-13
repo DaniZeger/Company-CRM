@@ -83,6 +83,9 @@ export class ApiService {
   logIn(user: User): Observable<User> {
     return this.POST<User>('users/login', user)
   }
+  signUp(user: User): Observable<User> {
+    return this.POST<User>('users/signup', user)
+  }
 
   //!####### COSTUMERS METHODS #########
   // To get list of costumers to work with you can open Postman and insert -

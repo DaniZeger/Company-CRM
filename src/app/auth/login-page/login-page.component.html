@@ -1,9 +1,9 @@
 <section>
-    <h1 class="text-center">
+    <h1 class="text-center fw-bold fs-1">
         COMPANY <span class="text-info"><i class="bi bi-columns-gap"></i></span> CRM
     </h1>
-    <h4 class="text-center text-secondary">Login to your account</h4>
-    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="mt-5">
+    <h4 class="text-center text-secondary fs-4">Login to your account</h4>
+    <form [formGroup]=" loginForm" (ngSubmit)="onSubmit()" class="mt-5">
         <div class="mb-2">
             <input #emailFieldRef type="text" class="form-control" formControlName="email" placeholder="Email">
         </div>
@@ -16,5 +16,8 @@
             <button class="btn btn-primary btn-lg" type="submit" [disabled]="loginForm.invalid">Log In</button>
         </div>
     </form>
-    <app-footer></app-footer>
+    <div class="text-center mt-3">
+        <a routerLink="/signin" class="text-body-tertiary">
+            I don't have an account yet</a>
+    </div>
 </section>
